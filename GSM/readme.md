@@ -36,7 +36,5 @@ To manually send an SMS one can do the following:
 - Type in `AT+CMGF=1` and press enter to set the communication mode to text (as opposed to binary)
 - Type in `AT+CMGS="+441111222233"` and press enter to set the number to send the SMS to (replace with the number you wish to use, including country code), the console should now show a '>' to prompt for a message.
 - Type in the text which you wish to send, newlines can be included in this.
-- The message is ended with a hex signal of 0x1A, however this cannot easily be input within screen.
-- Get out of screen by pressing Ctrl+A and then typing `:quit`.
-- To send the hex run `sudo echo -en "\x1A" > /dev/ttyAMA0` (for some reason this doesn't work without sudo, despite the permissions being set to allow anyone read/write access)
+- The message is ended with a hex signal of 0x1A, this can be input by pressing Ctrl+Z
 - If everything has been done correctly then the SMS should be recieved within 10 seconds or so.
