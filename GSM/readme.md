@@ -35,6 +35,6 @@ To manually send an SMS one can do the following:
 - Type in `AT+IPR=19200` and press enter to set the baud rate (this shouldn't be necessary unless it's been changed somehow)
 - Type in `AT+CMGF=1` and press enter to set the communication mode to text (as opposed to binary)
 - Type in `AT+CMGS="+441111222233"` and press enter to set the number to send the SMS to (replace with the number you wish to use, including country code), the console should now show a '>' to prompt for a message.
-- Type in the text which you wish to send, newlines can be included in this.
+- Type in the text which you wish to send, newlines can be included in this, and the message should end with a newline.
 - The message is ended with a hex signal of 0x1A, this can be input by pressing Ctrl+Z
 - If everything has been done correctly then the SMS should be recieved within 10 seconds or so.
